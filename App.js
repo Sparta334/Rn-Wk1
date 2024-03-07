@@ -1,26 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>111019022 陳奕誠 數位三甲</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <AlbumList />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 
   text: {
     color: '#12d',
-    fontSize: 30,
-  }
+    fontSize: 30
+  },
+
 
 });
